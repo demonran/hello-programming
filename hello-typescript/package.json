@@ -1,0 +1,9 @@
+{
+    "name": "hello-ts",
+    "version": "0.1",
+    "description": "Learn ts",
+    "devDependencies": {
+        "eslint": "^9.4.0",
+        "prettier": "^3.3.2"
+    }
+}

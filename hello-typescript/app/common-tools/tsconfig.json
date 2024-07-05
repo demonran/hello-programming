@@ -1,0 +1,19 @@
+{
+  "compilerOptions": {                        
+    "target": "es6",                               
+    "module": "commonjs",                           
+    "outDir": "./dist",                             
+    "rootDir": "app/src",      
+    "allowJs": true,                       
+    "strict": true,
+    "moduleResolution": "node",
+    "esModuleInterop": true,      
+    "paths": {
+      "@/*": ["app/src/*"]
+    },                 
+  },
+  // "include": ["env.d.ts", "frontend/src/**/*", "frontend/src/**/*.ts","frontend/src/**/*.vue"],
+  "exclude":[
+    "./node_modules"
+  ]
+}
