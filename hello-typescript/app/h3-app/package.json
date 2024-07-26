@@ -1,0 +1,21 @@
+{
+  "name": "h3-app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon --watch *.ts --exec \"ts-node\" ./app.ts",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^20.14.10",
+    "esbuild": "^0.23.0",
+    "nodemon": "^3.1.4",
+    "ts-node": "^10.9.2"
+  },
+  "dependencies": {
+    "h3": "^1.12.0"
+  }
+}

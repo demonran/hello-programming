@@ -1,6 +1,6 @@
 import { createRouter, createWebHistory, type RouteRecordRaw } from 'vue-router'
 import HomeView from '../views/HomeView.vue'
-import { CssViews } from '@/constants'
+import { CssViews, TailwindViews } from '@/constants'
 
 
 const cssRoutes: RouteRecordRaw[] = []
@@ -10,6 +10,15 @@ CssViews.forEach(item => {
     path: item.path,
     name: item.name,
     component: () => import(`@/views/css/${item.path}.vue`)
+  })
+})
+
+const tailwindRoutes: RouteRecordRaw[] = []
+TailwindViews.forEach(item => {
+  tailwindRoutes.push({
+    path: item.path,
+    name: item.name,
+    component: () => import(`@/views/tailwind/${item.path}.vue`)
   })
 })
 
@@ -53,6 +62,12 @@ const router = createRouter({
           // which is lazy-loaded when the route is visited.
           component: () => import('@/views/css/index.vue'),
           children: cssRoutes
+        },
+        {
+          path: '/tailwind',
+          name: 'tailwind',
+          component: () => import('@/views/tailwind/index.vue'),
+          children: tailwindRoutes
         }
       ]
     },

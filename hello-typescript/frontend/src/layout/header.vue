@@ -4,15 +4,23 @@
       <RouterLink to="/">Home</RouterLink>
       <RouterLink to="/about">About</RouterLink>
       <RouterLink to="/light">Light</RouterLink>
-      <RouterLink :isActive="false"  to="/" class="dropdown">CSS
-
-         <ul class="dropdown-content">
+      <RouterLink :isActive="false" to="/" class="dropdown"
+        >CSS
+        <ul class="dropdown-content">
           <li v-for="item in CssViews" :key="item.path">
             <RouterLink :to="'/css/' + item.path">{{ item.name }} </RouterLink>
           </li>
         </ul>
       </RouterLink>
-     
+
+      <RouterLink :isActive="false" to="/" class="dropdown"
+        >Tailwind
+        <ul class="dropdown-content">
+          <li v-for="item in TailwindViews" :key="item.path">
+            <RouterLink :to="'/tailwind/' + item.path">{{ item.name }} </RouterLink>
+          </li>
+        </ul>
+      </RouterLink>
     </nav>
     <ul>
       <li></li>
@@ -22,7 +30,7 @@
   
   <script setup lang="ts">
 import { RouterLink } from 'vue-router'
-import { CssViews } from '@/constants/index'
+import { CssViews, TailwindViews } from '@/constants/index'
 </script>
   
   
