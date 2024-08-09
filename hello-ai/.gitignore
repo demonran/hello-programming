@@ -1,0 +1,6 @@
+.idea
+*.iml
+/senti_analysis/tmp/
+/wiki_zh_word2vec/data/
+*.csv
+*/data/*
