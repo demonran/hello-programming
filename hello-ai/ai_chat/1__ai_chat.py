@@ -38,7 +38,7 @@ def get_response(message, model):
 
 
 if __name__ == '__main__':
-    model = gensim.models.Word2Vec.load('../wiki_zh_word2vec/data/wiki.zh.text.model')
+    model = gensim.models.Word2Vec.load('./text.txt')
     while True:
         user_input = input("用户: ")
         response = get_response(user_input, model)
