@@ -4,4 +4,4 @@
 /wiki_zh_word2vec/data/
 *.csv
 */data/*
-.venv/
+.venv/*
